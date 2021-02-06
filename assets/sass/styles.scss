@@ -1,0 +1,779 @@
+@import 'compass';
+@import 'bootstrap/bootstrap';
+
+/*Set our variables in this file - this will override bootstrap's variables*/
+@import 'variables';
+
+/*Place your own styles here*/  
+
+
+/* Custom Colors */
+
+$light-blue-color: #34adbf;
+$dark-gray-color: #6d7880;
+$light-gray-color: #b8c1c6;
+
+/* End Custom Colors */
+
+
+/* Top Navbar */
+#top-nav{
+
+	.navbar{
+	    background-color: #fff;
+	    border: unset;
+	    border-radius: unset;
+	    margin-bottom: 0 !important;
+
+		.container{
+
+			.navbar-header .navbar-brand{
+				position: absolute;
+		        left: 40%;
+		        display: block;
+		        width: 250px;
+		        top: -10px;
+		        text-align: center;
+			}
+
+			.navbar-nav{
+				margin: 7.5px -15px;
+
+				li{
+					margin-right: 5px; 
+
+					a{
+						color: $gray-base;
+
+						&:hover{
+							text-decoration: $link-hover-decoration;
+						}
+					}
+				}
+
+				li.active a{
+					background-color: unset;
+				}
+			}
+
+			.navbar-left li a{
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+/* End Top Navbar */
+
+
+/* Search Navbar */
+#search-nav{
+	
+	.navbar{
+		background-color: $light-gray-color;
+		border: unset;
+		border-radius: unset;
+		height: 35px;
+		min-height: 35px !important;
+		margin-bottom: 0;
+
+		.navbar-nav{
+			li{
+				a{
+					padding-top: 10px !important;
+					text-transform: uppercase;
+					color: #FFFFFF;
+					line-height: 15px;
+					padding-bottom: 10px;
+
+					&:hover{
+						text-decoration: $link-hover-decoration;
+					}
+				}
+			}
+
+			li#quote{
+				a{
+					background-color: $light-blue-color;
+				}
+			}
+
+			li#search a{
+				background-color: $dark-gray-color;
+			}
+		}
+	}
+}
+/* End Search Navbar */
+
+
+/* Home Slider/Carousel */
+header{
+	min-height: 600px;
+	background: #eaedef;
+	
+	#mycarousel.carousel{
+
+		.carousel-inner { 
+
+			.item{
+				height: 100%;
+
+				.translucent{
+		            position: absolute;
+		            top: 0;
+		            bottom: 0;
+		            left: 0;
+		            width: 100%;
+		            opacity: 0.4;
+		            background-color: $gray-base;
+		        }
+
+				.carousel-caption{
+					top: 30%;
+
+					h1{
+						font-size: $font-size-h1;
+						text-transform: uppercase;
+						padding: 10px 5%;
+					}
+					p{
+						font-size: $font-size-base;
+						font-style: italic;
+						text-align: center;
+	    				padding: 0 25%;
+					}
+				}
+			}
+		}
+	}
+}
+/* End Home Slider/Carousel */
+
+/* Floating Boxes */
+#floating-boxes{
+	margin-bottom: -50px;
+	background-color: #eaedef;
+
+	.container{
+		position: relative;
+	    top: -165px;
+	    border: 1px solid #FFFFFF;
+	    background: #FFFFFF;
+	    padding: 10px 20px;
+	    width: 80%;
+
+	    .row{
+	    	.col-md-3{
+
+	    		padding-left: 5px;
+	    		padding-right: 5px;
+
+	    		.panel{
+	    			border: unset;
+	    			margin-bottom: unset;
+
+	    			.panel-heading{
+	    				color: #333333;
+						background-color: $dark-gray-color;
+						border: unset;
+						color: #FFFFFF;
+						height: 135px;
+						text-align: center;
+						padding-top: 25%;
+						border-radius: unset;
+
+						.panel-title{
+							text-transform: uppercase;
+						}
+	    			}
+
+	    			.panel-body{
+	    				padding: 0;
+	    			}
+	    		}
+
+	    		.panel#active-box{
+	    			.panel-heading{
+	    				background-color: $light-blue-color;
+	    				
+	    			}
+
+	    			.panel-body{
+	    				position: relative;
+	    				text-align: center;
+
+	    				.translucent{
+				            position: absolute;
+				            top: 0;
+				            bottom: 0;
+				            left: 0;
+				            width: 100%;
+				            opacity: 0.4;
+				            background-color: $light-blue-color;
+				        }
+
+				        a.btn{
+			        		position: absolute;
+			        		top: 40%;
+			        		text-transform: uppercase;
+			        		border-color: #FFFFFF;
+			        		color: #FFFFFF;
+			        		background-color: unset;
+			        		font-size: $font-size-small; 
+			        		left: 20%;
+
+			        		&:hover{
+								color: #FFFFFF;
+								background-color: $light-blue-color;
+								text-decoration: $link-hover-decoration;
+							}
+			        	}
+	    			}
+	    		}
+	    	}
+	    }
+	}
+}
+/* End Floating Boxes */
+
+
+/* About Us Section */
+#about-us{
+	background-color: #eaedef;
+	padding-bottom: 50px; 
+
+	.container{
+		text-align: center;
+
+		.row{
+			.col-md-12{
+				h2{
+					color: $light-blue-color;
+					text-transform: uppercase;
+
+					&:after {
+					    content: ""; 
+					    display: block; 
+					    margin: 0 auto; 
+					    width: 5%; 
+					    padding-top: 30px; 
+					    border-bottom: 2px solid $dark-gray-color; 
+					}
+				}
+				p{
+					padding: 10px 20%;
+				}
+				a.btn{
+					background-color: unset;
+					text-transform: uppercase;
+					border-radius: unset;
+					border: 2px solid $light-blue-color;
+					color: $light-blue-color;
+					padding: 5px 25px;
+
+					&:hover{
+						background-color: $light-blue-color;
+						text-decoration: $link-hover-decoration;
+						color: #FFFFFF;
+					}
+				}
+			}
+		}
+	}
+}
+/* End About Us Section */
+
+/* Call to Action */
+#call-to-action{
+	margin: 60px 0;
+	background: #FFFFFF;
+
+	.container{
+
+		text-align: center;
+
+		.row{
+
+			.col-md-6{
+
+				img{
+					width: 150px;
+					padding: 10px 0;
+				}
+
+				h4{
+					color: $light-blue-color;
+					padding: 0 25%;
+				}
+				p{
+					font-style: italic;
+					padding: 5px 25%;
+				}
+				a{
+					color: $light-blue-color;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+/* End Call to Action */
+
+/* Connect With Us */
+#connect-with-us{
+	
+	margin-bottom: 50px;	
+
+	.container{
+	
+		.row{
+	
+			.col-md-12{
+
+				text-align: center;
+
+				hr{
+					border-top: 2px solid $light-gray-color;
+				}
+
+				ul{
+					list-style-type: none;
+
+					li{
+						display: inline-block;
+						margin-right: 8px;
+
+						h3{
+							text-transform: uppercase;
+							position: relative;
+							top: 5px;
+							padding-right: 10px;
+						}
+
+						a{
+							img{
+								width: 30px;
+								transition: all .2s ease-in-out;
+
+								&:hover{
+									transform: scale(1.1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* End Connect With Us */
+
+/* Footer 1 */
+#footer-1{
+	background-color: $light-gray-color;
+
+	.container-fluid{
+
+		.row{
+
+			.col-md-6.col-sm-6{
+
+				padding: 40px 40px 0 40px;
+
+				h4{
+					color: #FFFFFF;
+					text-transform: uppercase;
+					padding-bottom: 10px;
+				}
+				address{
+					color: #FFFFFF;
+					opacity: 0.9;
+				}
+
+				ul{
+					list-style: none;
+					padding: 0;
+
+					li{
+						margin: 10px 0;
+
+						a{
+							color: #FFFFFF;
+							opacity: 0.9;
+
+							&:hover{
+								text-decoration: $link-hover-decoration;
+							}
+						}
+					}
+				}
+			}
+
+			/* contact form */
+
+			.col-md-6.col-sm-6#contact-form{
+				background: #cdd4d8;
+
+				form{
+
+					.form-group{
+
+						font-family: michromaregular;
+						font-size: $font-size-small;
+
+
+						.form-control{
+							background-color: #FFFFFF;
+							padding: 10px 15px;
+							border: unset;
+							color: $gray-base;
+							opacity: 0.9;
+							border-radius: unset;
+							font-size: $font-size-small;
+						}
+
+						.btn{
+							background-color: $light-blue-color;
+							color: #FFFFFF;
+							border-radius: unset;
+							text-transform: uppercase;
+							border: unset;
+							padding: 10px 20px;
+							width: 50%;
+							font-size: $font-size-small;
+
+							&:hover{
+								text-decoration: $link-hover-decoration;
+							}
+						}
+					}
+
+					.form-group#remember-me{
+						padding: 1px 5px;
+						background-color: #FFFFFF;
+
+						label{
+							color: $gray-base;
+							opacity: 0.9;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*  End Footer 1 */
+
+/* Footer 2 */
+#footer-2{
+	.navbar{
+		background-color: #7dc0cf;
+		border: unset;
+		border-radius: unset;
+		margin-bottom: unset;
+		min-height: 40px;
+		padding-top: 10px; 
+ 
+		.navbar-nav{
+
+			margin-left: 25%;
+
+			li{
+				a{
+					color: #FFFFFF;
+				}
+			}
+		}
+
+		.navbar-nav{
+
+			li:not(:last-child) a{
+
+		       	&:after{
+		       		content: " | ";
+		       		color: #ffffff;
+		       	}
+		    }
+
+			li{
+				a{
+					padding: 12px 3px;
+
+					&:hover{
+						text-decoration: $link-hover-decoration;
+					}
+				}
+			}
+		}
+	}
+}
+/* End Footer 2 */
+
+/* 
+*
+About - Balustrade Page 
+*
+*/
+
+
+/* Header Section (Balustrade)*/
+
+@mixin header-balustrade($imgpath, $position: 0 0, $repeat: no-repeat, $size: 100% 450px){
+	background:{
+		image: url($imgpath);
+		position: $position;
+		repeat: $repeat;
+		size: $size;
+	}
+}
+
+section#balustrade{
+	@include header-balustrade('../images/about-bg.png');
+	height: 400px;
+	position: relative;
+
+	.translucent{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, #000000 100%);
+        opacity: 0.9;
+    }
+
+	.container{
+		position: relative;
+
+		.row{
+
+			.col-md-12{
+				text-align: center;
+				padding-top: 24%;
+
+		        h1{
+		        	color: #FFFFFF;
+
+		        }
+		        p{
+		        	color: #FFFFFF;
+		        	font-style: italic;
+		        }
+			}
+		}
+	}
+}
+/* End Header Section (Balustrade)*/
+
+
+/* About Balustrade */
+#about-balustrade{
+	margin: 50px 0;
+
+	.container{
+		.row{
+			.col-md-8{
+				h2{
+					color: $light-blue-color;
+					padding: 10px 0;
+				}
+			}
+			.col-md-4{
+				p{
+					color: $text-color;
+					font-size: $font-size-base;
+
+					a{
+						color: $light-blue-color;
+					}
+				}
+
+				h4{
+					color: $light-blue-color;
+					padding-bottom: 5px; 
+				}
+
+				ul{
+					list-style: none;
+					padding-left: 5px;
+					
+					li {
+					  	padding-left: 1em; 
+					  	text-indent: -.7em;
+					}
+
+					li::before {
+					  	content: "\002022 ";
+					  	color: $light-blue-color;
+					  	padding-right: 6px;
+					  	font-size: 1.3em;
+					}
+				}
+			}
+			.col-md-12{
+				hr{
+					border-top: 2px solid $light-gray-color;
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+}
+/* End About Balustrade */
+
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES */
+
+@media (max-width: 990px) {
+
+	#search-nav{
+
+		display: none!important;
+
+		@media(max-width: 767px){
+			display: none!important;
+		}
+	}
+
+	#top-nav{
+		.navbar-default{
+			min-height: 60px!important;
+		}
+	}
+
+    .navbar-header {
+        float: none;
+
+        .navbar-brand{
+        	padding-top: 10px !important;
+        	left: 2% !important;
+
+        	img{
+        		width: 230px !important;
+			    height: auto;
+			    position: relative;
+
+        		@media(max-width: 767px){
+        			width: 170px !important;
+				    height: auto;
+				    top: 40% !important;
+        		}
+        	}
+        }
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+    	margin-top: 5px;
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar.navbar-default .collapse.in {
+	    display: block !important;
+	 }
+
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar.navbar-default .navbar-nav > li > a {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	header{
+		height: 500px;
+
+		@media(max-width: 767px){
+			height: 350px;
+
+			#mycarousel.carousel .carousel-inner .item .carousel-caption{ 
+				top: 0% !important; 
+			}
+			#mycarousel.carousel .carousel-inner .item{
+				height: 350px;
+			}
+
+			#mycarousel.carousel .carousel-inner .item img{
+				height: 350px;
+			}
+		}
+	}
+
+	#floating-boxes {
+		margin-bottom: -100px;
+
+		.container{
+			width: 100%;
+
+			.row{
+
+				.col-md-3 {
+
+						.panel{
+							@media(max-width: 767px){
+								margin-bottom: 10px;
+							}
+						}
+
+						.panel#active-box{
+
+						.panel-body{
+
+							a.btn{
+								left: 2%;
+
+								@media(max-width: 767px){
+									left: 25%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#about-us .container .row .col-md-12 p{
+		@media(max-width: 767px){
+			padding: 10px 2%;
+		}
+	}
+
+	#connect-with-us .container .row .col-md-12 ul{
+		padding-left: 0;
+	}
+
+	section#balustrade{
+		@media(max-width: 767px){
+			background-size: 100% 320px;
+	    	height: 300px;
+	    }
+	}
+
+	#footer-1 .container-fluid .row .col-md-6.col-sm-6#contact-form form .form-group .btn{
+		float: unset !important;
+	}
+
+	#footer-2 .navbar .navbar-nav{
+		margin-left: unset;
+
+		li{
+			float: left !important;
+		}
+	}
+}
+
+
+
